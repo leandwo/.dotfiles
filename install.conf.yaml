@@ -3,5 +3,8 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
+    ~/.config/yabai/yabairc: yabairc
+    ~/.config/skhd/skhdrc: skhdrc
+
 
 
