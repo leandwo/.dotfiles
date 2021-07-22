@@ -135,3 +135,5 @@ if [ -f '/Users/leosol/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/leosol/g
 if [ -f '/Users/leosol/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/leosol/google-cloud-sdk/completion.zsh.inc'; fi
 
 export EDITOR=/usr/local/bin/nvim
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -5,6 +5,9 @@
     ~/.zshrc: zshrc
     ~/.config/yabai/yabairc: yabairc
     ~/.config/skhd/skhdrc: skhdrc
+    ~/.config/nvim/init.vim: 
+      path: init.vim
+      force: true
 
 
 

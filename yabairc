@@ -65,12 +65,6 @@ yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^1Password 7$" manage=off
 yabai -m rule --add app="^Synergy" manage=off
 yabai -m rule --add app="^CJLauncher" manage=off
-# yabai -m rule --add app="^Java" manage=off
-# yabai -m rule --add app="^Control Jockey" manage=off
-# yabai -m rule --add app="^control jockey" manage=off
-# yabai -m rule --add app="^cj" manage=off
-# yabai -m rule --add app="^java" manage=off
-
 
 
 echo "yabai configuration loaded.."
