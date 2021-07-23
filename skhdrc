@@ -37,7 +37,8 @@ hyper - z:
 hyper - x: 
   current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
   yabai -m space --destroy; \
-  yabai -m space --focus $((current_space - 1))
+  num_spaces=$(yabai -m query --spaces | jq length); \
+  yabai -m space --focus $([ "$num_spaces" -lt "$current_space" ] && echo $num_spaces || echo $current_space)
 ctrl + shift + alt - z: 
   yabai -m space --move prev; \
   spacebar -m config spaces on

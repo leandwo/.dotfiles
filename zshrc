@@ -69,6 +69,8 @@ alias dev="cd ~/m/dev/"
 alias config="cd ~/.config/"
 alias temp="cd ~/tmp/"
 alias tmp="cd ~/tmp/"
+alias dotfiles="cd ~/.dotfiles/"
+alias df="dotfiles"
 
 # work folders
 alias scs-old="cd ~/m/dev/scs-old"

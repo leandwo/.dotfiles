@@ -8,6 +8,8 @@
     ~/.config/nvim/init.vim: 
       path: init.vim
       force: true
-
+    ~/.qutebrowesr/config.py: 
+      path: .qutebrowser/config.py
+      force: true
 
 

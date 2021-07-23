@@ -10,6 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'itchyny/vim-cursorword'
   Plug 'tools-life/taskwiki'
+  Plug 'justinmk/vim-dirvish'
 
 call plug#end()
 
