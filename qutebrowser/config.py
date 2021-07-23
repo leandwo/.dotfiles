@@ -736,7 +736,6 @@ c.fonts.default_size = '16pt'
 c.fonts.downloads = 'MesloLGS NF'
 
 # Bindings for normal mode
-config.bind('<Ctrl+Tab>', 'tab-next')
 config.bind('<Ctrl+e>', 'scroll-px 0 100')
 config.bind('<Ctrl+y>', 'scroll-px 0 -100')
 config.bind('j', 'tab-next')

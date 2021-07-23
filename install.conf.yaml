@@ -9,7 +9,7 @@
       path: init.vim
       force: true
     ~/.qutebrowesr/config.py: 
-      path: .qutebrowser/config.py
+      path: qutebrowser/config.py
       force: true
 
 
