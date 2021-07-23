@@ -33,6 +33,8 @@ ctrl + shift + alt - w : yabai -m window --space next; yabai -m space --focus ne
 # create/delete spaces
 hyper - z: 
   yabai -m space --create; \
+  current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
+  yabai -m space last --move "$((current_space + 1))"; \
   spacebar -m config spaces on
 hyper - x: 
   current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
