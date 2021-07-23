@@ -1,16 +1,23 @@
+" TODO: Split init.vim into multiple files?
+"
+" TODO: check other init.vim's for Inspiration
+" https://github.com/zhranklin/init.vim/blob/master/files/.config/nvim/init.vim
+"
 call plug#begin(stdpath('data') . '/plugged')
-  Plug 'itchyny/calendar.vim'
-  Plug 'vimwiki/vimwiki', { 'branch': 'dev'}
-  Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-commentary'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug 'joshdick/onedark.vim'
-  Plug 'itchyny/lightline.vim'
-  Plug 'itchyny/vim-cursorword'
-  Plug 'tools-life/taskwiki'
-  Plug 'justinmk/vim-dirvish'
+
+Plug 'itchyny/calendar.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-cursorword'
+Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-dirvish'
+Plug 'tools-life/taskwiki'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev'}
 
 call plug#end()
 
@@ -52,15 +59,6 @@ call plug#end()
   set conceallevel=0
   set concealcursor=
 
-" Shortcuts
-  xmap ga <Plug>(EasyAlign)
-  nmap ga <Plug>(EasyAlign)
-  nnoremap <C-L> :nohlsearch<CR><C-L>
-
-  " leader
-  nnoremap <SPACE> <Nop>
-  let mapleader = "\<Space>"
-
 " Vimwiki
 " let g:markdown_folding=1
 let g:vimwiki_markdown_link_ext = 1
@@ -80,7 +78,28 @@ source ~/.cache/calendar.vim/credentials.vim
 " lightline
 let g:lightline = {
       \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
       \ }
 
-" init.vim Inspiration
-  " https://github.com/zhranklin/init.vim/blob/master/files/.config/nvim/init.vim
+
+" remappings
+  xmap ga <Plug>(EasyAlign)
+  nmap ga <Plug>(EasyAlign)
+  nnoremap <C-L> :nohlsearch<CR><C-L>
+
+  " leader
+  nnoremap <SPACE> <Nop>
+  let mapleader = "\<Space>"
+
+
+  " help / man
+  map <S-K> :vert bo Man<CR>
+  cabbrev Man vert bo Man
+  " cabbrev help vert bo help
+  cabbrev h vert bo help
