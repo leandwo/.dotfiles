@@ -19,8 +19,9 @@ ctrl + shift + alt - s : yabai -m window --warp south
 ctrl + shift + alt - f : yabai -m window --warp north
 ctrl + shift + alt - t : yabai -m window --warp east
 # focus next / prev including floating windows
-hyper - a : yabai -m window --focus first
+hyper - v : yabai -m window --focus first
 hyper - g : yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")"
+hyper - a : yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")"
 # toggle window split type (horizontal/vertical)
 ctrl + shift + alt - v : yabai -m window --toggle split
 

@@ -56,8 +56,13 @@ call plug#end()
   set smarttab
   set linebreak
   set cindent " idk what this does
+
   set conceallevel=0
+
+  " FIXME: conceal cursor
   set concealcursor=
+
+  set hidden
 
 " Vimwiki
 " let g:markdown_folding=1

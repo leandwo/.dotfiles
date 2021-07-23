@@ -112,9 +112,10 @@ alias calendar="nvim -c ':Calendar'"
 alias cal="calendar"
 alias c="calendar"
 
-# taskwarrior
-alias t="task"
+# task, taskwarrior
+alias t="task add"
 alias ta="task add"
+alias tn="task next"
 alias tw="task next pro:work"
 
 # yadm

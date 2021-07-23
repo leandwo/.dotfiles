@@ -38,13 +38,16 @@ c.window.hide_decoration = False
 # Binds #
 #########
 
-config.bind('<Ctrl+Tab>', 'tab-next')
+# scrolling
 config.bind('<Ctrl+e>', 'scroll-px 0 100')
 config.bind('<Ctrl+y>', 'scroll-px 0 -100')
+
+# tab navigation
 config.bind('j', 'tab-next')
 config.bind('k', 'tab-prev')
+config.bind('J', 'tab-move +')
+config.bind('K', 'tab-move -')
 config.bind('t', 'set-cmd-text -s :tab-select')
-
 
 config.load_autoconfig(False)
 
