@@ -73,6 +73,8 @@ alias dotfiles="cd ~/.dotfiles/"
 alias df="dotfiles"
 
 # work folders
+alias fs-ios="cd ~/m/dev/fs-ios"
+alias fs-www="cd ~/m/dev/fs-www"
 alias scs-old="cd ~/m/dev/scs-old"
 alias scs-api="cd ~/m/dev/scs-api"
 alias scs-www="cd ~/m/dev/scs-www"
@@ -113,7 +115,7 @@ alias cal="calendar"
 alias c="calendar"
 
 # task, taskwarrior
-alias t="task add"
+alias t="task"
 alias ta="task add"
 alias tn="task next"
 alias tw="task next pro:work"

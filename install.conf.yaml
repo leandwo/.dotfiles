@@ -7,6 +7,9 @@
     ~/.config/spacebar/spacebarrc:
       path: spacebarrc
       force: true
+    ~/.config/kitty/kitty.conf:
+      path: kitty/kitty.conf
+      force: true
     ~/.config/skhd/skhdrc: skhdrc
     ~/.config/nvim/init.vim:
       path: init.vim

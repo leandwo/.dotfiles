@@ -93,7 +93,8 @@ let g:lightline = {
       \ }
 
 
-" remappings
+" remappings, keybinds, bindings
+  " TODO: easy align vs tabularize?
   xmap ga <Plug>(EasyAlign)
   nmap ga <Plug>(EasyAlign)
   nnoremap <C-L> :nohlsearch<CR><C-L>
@@ -102,9 +103,10 @@ let g:lightline = {
   nnoremap <SPACE> <Nop>
   let mapleader = "\<Space>"
 
-
   " help / man
   map <S-K> :vert bo Man<CR>
   cabbrev Man vert bo Man
-  " cabbrev help vert bo help
   cabbrev h vert bo help
+  
+  " FZF
+
