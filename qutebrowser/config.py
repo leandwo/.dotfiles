@@ -1,5 +1,11 @@
 # TODO: Separate sections into different files
 
+import os
+
+os.environ['PATH'] += os.pathsep + '/usr/local/bin'
+os.environ['PATH'] += os.pathsep + '/usr/bin'
+os.environ['NODE_PATH'] += os.pathsep + '/usr/local/lib/node_modules'
+
 c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.grayscale.all = False
 c.colors.webpage.preferred_color_scheme = 'dark'
@@ -7,10 +13,10 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 c.content.autoplay = False
 c.content.blocking.method = 'adblock'
 
-c.editor.command = ['zsh', 'vim', '{file}']
+c.editor.command = ['kitty', '--single-instance', 'nvim', '{}']
 
 c.fonts.default_family = 'MesloLGS NF'
-c.fonts.default_size = '16pt'
+c.fonts.default_size = '14pt'
 c.fonts.downloads = 'MesloLGS NF'
 c.fonts.hints = 'default_size default_family'
 
@@ -28,8 +34,10 @@ c.tabs.position = 'left'
 c.tabs.select_on_remove = 'next'
 c.tabs.show = 'always'
 c.tabs.show_switching_delay = 5000
+c.tabs.title.format = ' {aligned_index} | {perc}{audio}{private}{current_title}'
+c.tabs.title.format_pinned = ' {aligned_index} | [P] {perc}{audio}{private}{current_title}'
 
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}', 'g': 'https://www.google.com/search?q={}', 'd': 'https://www.duckduckgo.com/search?q={}', 'y': 'https://www.youtube.com/results?search_query={}'}
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}', 'g': 'https://www.google.com/search?q={}', 'ddg': 'https://www.duckduckgo.com/?q={}', 'y': 'https://www.youtube.com/results?search_query={}'}
 
 c.window.hide_decoration = False
 
@@ -42,12 +50,21 @@ c.window.hide_decoration = False
 config.bind('<Ctrl+e>', 'scroll-px 0 100')
 config.bind('<Ctrl+y>', 'scroll-px 0 -100')
 
-# tab navigation
+# tab
 config.bind('j', 'tab-next')
 config.bind('k', 'tab-prev')
 config.bind('J', 'tab-move +')
 config.bind('K', 'tab-move -')
+config.bind('cn', 'tab-only -p -P keep')
+config.bind('p', 'tab-pin')
 config.bind('t', 'set-cmd-text -s :tab-select')
+
+config.bind('m', 'bookmark-add')
+config.bind('M', 'quickmark-save')
+config.bind('st', 'config-source')
+
+# toggle configs
+config.bind('xx', 'config-cycle window.hide_decoration true false')
 
 config.load_autoconfig(False)
 
