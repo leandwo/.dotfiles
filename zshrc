@@ -52,18 +52,6 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 alias l="exa -abhHlS"
 
-# config files
-alias zshrc="nvim ~/.zshrc"
-alias z="zshrc"
-alias yabairc="nvim ~/.config/yabai/yabairc"
-alias yrc="yabairc"
-alias skhdrc="nvim ~/.config/skhd/skhdrc"
-alias skhd="skhdrc"
-alias vimrc="v ~/.config/nvim/init.vim"
-alias iv="vimrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias spacebarrc="nvim ~/.config/spacebar/spacebarrc"
-
 # folders
 alias dev="cd ~/m/dev/"
 alias config="cd ~/.config/"
@@ -71,6 +59,19 @@ alias temp="cd ~/tmp/"
 alias tmp="cd ~/tmp/"
 alias dotfiles="cd ~/.dotfiles/"
 alias df="dotfiles"
+
+# config files
+alias zshrc="df && nvim ~/.zshrc"
+alias z="zshrc"
+alias yabairc="df && nvim ~/.config/yabai/yabairc"
+alias yrc="yabairc"
+alias skhdrc="df && nvim ~/.config/skhd/skhdrc"
+alias skhd="skhdrc"
+alias vimrc="df && v ~/.config/nvim/init.vim"
+alias iv="vimrc"
+alias spacebarrc="df && nvim ~/.config/spacebar/spacebarrc"
+alias qb="df && v ~/.dotfiles/qutebrowser/config.py"
+
 
 # work folders
 alias fs-ios="cd ~/m/dev/fs-ios"
@@ -108,6 +109,10 @@ alias w="nvim -c ':VimwikiIndex'"
 alias wi="nvim -c ':VimwikiDiaryIndex'"
 alias i="nvim -c ':VimwikiDiaryIndex'"
 alias n="nvim -c ':VimwikiMakeDiaryNote'"
+
+# man
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
 
 # calendar.vim
 alias calendar="nvim -c ':Calendar'"
