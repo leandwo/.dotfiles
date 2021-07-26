@@ -9,6 +9,7 @@
 """""""""""""""""""""
   call plug#begin(stdpath('data') . '/plugged')
 
+  Plug 'ThePrimeagen/vim-be-good'
   Plug 'itchyny/calendar.vim'    
   Plug 'itchyny/lightline.vim'
   Plug 'itchyny/vim-cursorword'
@@ -52,8 +53,8 @@
   " appearance
   set number           "line number
   set relativenumber
-  set cursorline       "hilight the line of the cursor
-  set cursorcolumn     "hilight the column of the cursor
+  set nocursorline       "hilight the line of the cursor
+  set nocursorcolumn     "hilight the column of the cursor
   " set nowrap           "no line wrapping
   colorscheme onedark  
   set background=dark "use the light version of gruvbox
@@ -129,42 +130,51 @@
   " help, man
   nnoremap      <S-K>            :vert bo Man<CR>
 
-  " window navigation
-  nnoremap <S-A-C-n> <C-w>h
-  nnoremap <S-A-C-e> <C-w>j
-  nnoremap <S-A-C-u> <C-w>k
-  nnoremap <S-A-C-i> <C-w>l
+  " windows
+  " nnoremap <S-A-C-n> <C-w>h
+  " nnoremap <S-A-C-e> <C-w>j
+  " nnoremap <S-A-C-u> <C-w>k
+  " nnoremap <S-A-C-i> <C-w>l
 
   nnoremap <A-C-n> <C-w>h
   nnoremap <A-C-e> <C-w>j
   nnoremap <A-C-u> <C-w>k
   nnoremap <A-C-i> <C-w>l
 
-  nnoremap <S-C-n> <C-w>h
-  nnoremap <S-C-e> <C-w>j
-  nnoremap <S-C-u> <C-w>k
-  nnoremap <S-C-i> <C-w>l
+  " nnoremap <S-C-n> <C-w>h
+  " nnoremap <S-C-e> <C-w>j
+  " nnoremap <S-C-u> <C-w>k
+  " nnoremap <S-C-i> <C-w>l
 
-  nnoremap <S-A-n> <C-w>h
-  nnoremap <S-A-e> <C-w>j
-  nnoremap <S-A-u> <C-w>k
-  nnoremap <S-A-i> <C-w>l
+  " nnoremap <S-A-n> <C-w>h
+  " nnoremap <S-A-e> <C-w>j
+  " nnoremap <S-A-u> <C-w>k
+  " nnoremap <S-A-i> <C-w>l
 
-  nnoremap <leader>sw :vsplit<CR>
-  nnoremap <leader>ws :vsplit<CR>
-  nnoremap <leader>cw :wq!<CR>
-  nnoremap <leader>dw :wq!<CR>
+  nnoremap <leader>vv :vsplit<CR>
+  nnoremap <leader>vs :split<CR>
+  " nnoremap <leader>d :close<CR>
 
+  " nnoremap <leader>n <C-w>h
+  " nnoremap <leader>e <C-w>j
+  " nnoremap <leader>u <C-w>k
+  " nnoremap <leader>i <C-w>l
 
-
-  " tab navigation
-  nnoremap <leader> tt :tabnew<CR>
-  nnoremap <C-n>  gt
-  nnoremap <C-i> gT
+  " tabs
+  " nnoremap <leader>tt :tabnew<CR>
+  nnoremap tn  gT
+  nnoremap ti gt
+  nnoremap td :tabclose<CR>
+  noremap tt :tab split<CR>
 
 
   " buffer
-  " nnoremap <leader>sb :w<CR>
+  nnoremap <leader>bi :bnext<CR>
+  nnoremap <leader>bn :brev<CR>
+  nnoremap <leader>bs :wq<CR>
+  nnoremap <leader>bS :wq!<CR>
+  nnoremap <leader>bd :bd<CR>
+  nnoremap <leader>bD :q!<CR>
 
 
   "" plugins
@@ -184,7 +194,7 @@
   imap <c-x><c-l> <plug>(fzf-complete-line)
 
   " Fzf, fuzzy finder
-  nnoremap <leader><tab>    :<plug>
+  " nnoremap <leader><tab>    :<plug>
   nnoremap <leader><leader> :Buffers<CR>
   nnoremap <leader>o        :GFiles<CR>
   nnoremap <leader>O        :Files<CR>

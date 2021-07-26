@@ -71,6 +71,8 @@ alias vimrc="df && v ~/.config/nvim/init.vim"
 alias iv="vimrc"
 alias spacebarrc="df && nvim ~/.config/spacebar/spacebarrc"
 alias qb="df && v ~/.dotfiles/qutebrowser/config.py"
+alias kconf="df && v ~/.dotfiles/kitty/kitty.conf"
+alias k="kconf"
 
 
 # work folders
