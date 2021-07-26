@@ -84,7 +84,7 @@ ctrl + shift + alt - o:
 ctrl + alt + shift - y : yabai -m window --toggle sticky
 
 # toggle float
-ctrl + alt + shift - u : 
+ctrl + alt + shift - k : 
   yabai -m window --toggle float;\
   yabai -m window --grid 6:4:1:1:2:4
 
