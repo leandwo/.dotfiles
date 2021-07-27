@@ -78,11 +78,11 @@ meh - 0x32 :
 meh - q : 
   yabai -m window --warp west
 meh - w : 
-  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
-  || yabai -m window --focus last
-meh - f : 
   yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")" \
   || yabai -m window --focus first
+meh - f : 
+  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
+  || yabai -m window --focus last
 meh - p : 
   yabai -m window --warp east
 meh - b : 
