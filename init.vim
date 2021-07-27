@@ -195,8 +195,9 @@
 
   " Fzf, fuzzy finder
   " nnoremap <leader><tab>    :<plug>
-  nnoremap <leader><leader> :Buffers<CR>
-  nnoremap <leader>o        :GFiles<CR>
+  nnoremap <leader><leader> :GFiles<CR>
+  nnoremap <leader><CR>     :Buffers<CR>
+  nnoremap <leader>o        :Files<CR>
   nnoremap <leader>O        :Files<CR>
   nnoremap <leader>l        :Lines<CR>
   nnoremap <leader>f        :Ag<CR>

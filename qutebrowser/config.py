@@ -39,8 +39,8 @@ c.tabs.select_on_remove                  = 'next'
 c.tabs.show                              = 'always'
 c.tabs.show_switching_delay              = 5000
 
-c.tabs.title.format                      = ' {relative_index}| {audio}{private}{current_title}'
-c.tabs.title.format_pinned               = ' {relative_index}| {audio}{private}{current_title}'
+c.tabs.title.format                      = '{relative_index}| {audio}{private}{current_title}'
+c.tabs.title.format_pinned               = '{relative_index}* {audio}{private}{current_title}'
 
 c.url.searchengines                      = {'DEFAULT': 'https://www.google.com/search?q={}', 'g': 'https://www.google.com/search?q={}', 'ddg': 'https://www.duckduckgo.com/?q={}', 'y': 'https://www.youtube.com/results?search_query={}'}
 
@@ -54,6 +54,9 @@ c.window.hide_decoration                 = False
 # scrolling
 config.bind('<Ctrl+e>', 'scroll-px 0 100')
 config.bind('<Ctrl+y>', 'scroll-px 0 -100')
+
+# paste
+config.bind('PP', 'open -t -- {clipboard}')
 
 # tab
 config.bind('j', 'tab-next')

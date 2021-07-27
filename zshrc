@@ -95,6 +95,8 @@ alias rsp="restart_spacebar"
 # keyboards keyboards
 alias kb_flash_zygote="qmk flash -kb zygote -km leosolid"
 alias kb_edit_zygote="nvim ~/m/dev/qmk_firmware/keyboards/zygote/keymaps/leosolid/keymap.c"
+alias kb_flash_technik="qmk flash -kb boardsource/technik_o -km leosolid"
+alias kb_edit_technik="dev && cd qmk_firmware && nvim ~/m/dev/qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/keymap.c"
 
 # github
 alias gh_web="gh repo view --web"
