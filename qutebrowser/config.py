@@ -10,7 +10,8 @@ else:
 os.environ['PATH']                      += os.pathsep + '/usr/local/bin'
 os.environ['PATH']                      += os.pathsep + '/usr/bin'
 
-c.colors.webpage.darkmode.enabled        = True
+# TODO create toggle for diagnostics
+c.colors.webpage.darkmode.enabled        = False
 c.colors.webpage.darkmode.grayscale.all  = False
 c.colors.webpage.preferred_color_scheme  = 'dark'
 
