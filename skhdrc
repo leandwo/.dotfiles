@@ -78,26 +78,31 @@ meh - 0x32 :
 meh - q : 
   yabai -m window --warp west
 meh - w : 
-  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")" \
-  || yabai -m window --focus first
+  yabai -m window --focus prev || (yabai -m space  --focus prev || yabai -m space --focus last; yabai -m window --focus last)
+#   # yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")" \
+#   # || yabai -m window --focus last
 meh - f : 
-  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
-  || yabai -m window --focus last
+  yabai -m window --focus next || (yabai -m space  --focus next || yabai -m space --focus first; yabai -m window --focus first)
+#   # yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
+#   # || yabai -m window --focus first
 meh - p : 
   yabai -m window --warp east
 meh - b : 
   yabai -m window --space next; yabai -m space --focus next # send window to next
 
 # LEFT HAND : ROW 2
+meh - 0x33 :
+  yabai -m window --toggle float;\
+  yabai -m window --grid 6:4:1:1:2:4
 meh - a: 
   yabai -m space --move prev; \
   spacebar -m config spaces on
 meh - r : 
-  yabai -m space --focus prev || yabai -m space --focus last;\
-  yabai -m window --focus first
+  yabai -m space --focus prev || yabai -m space --focus last
+  # yabai -m window --focus mouse || yabai -m window --focus last
 meh - s : 
-  yabai -m space --focus next || yabai -m space --focus first;\
-  yabai -m window --focus first
+  yabai -m space --focus next || yabai -m space --focus first
+  # yabai -m window --focus mouse || yabai -m window --focus first
 meh - t: 
   yabai -m space --move next; \
   spacebar -m config spaces on
@@ -106,16 +111,16 @@ meh - g :
 
 # LEFT HAND : ROW 3
 meh - 0x1B :
-  yabai -m window --toggle float;\
-  yabai -m window --grid 6:4:1:1:2:4
+  yabai -m space --balance
 meh - z : 
-  yabai -m window --toggle zoom-fullscreen; \
   yabai -m window --grid 1:1:0:0:1:1 
 meh - x: 
-  current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
-  yabai -m space --destroy; \
-  num_spaces=$(yabai -m query --spaces | jq length); \
-  yabai -m space --focus $([ "$num_spaces" -lt "$current_space" ] && echo $num_spaces || echo $current_space)
+  yabai -m space --focus prev && yabai -m space recent --destroy; \
+  spacebar -m config spaces on
+  # current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
+  # yabai -m space --destroy; \
+  # num_spaces=$(yabai -m query --spaces | jq length); \
+  # yabai -m space --focus $([ "$num_spaces" -lt "$current_space" ] && echo $num_spaces || echo $current_space)
 meh - c:
   yabai -m space --create; \
   current_space=$(yabai -m query --spaces --space | jq -r '.index'); \

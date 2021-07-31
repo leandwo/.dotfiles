@@ -50,7 +50,7 @@ yabai -m space 9 --label nine
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^System Preferences$" sticky=on layer=normal manage=off
 yabai -m rule --add app="^KeyCastr" sticky=on layer=normal manage=off
-yabai -m rule --add app="^Amazon Chime" sticky=on layer=normal manage=off
+yabai -m rule --add app="^Amazon Chime" sticky=off layer=normal manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=normal manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=normal manage=off
 yabai -m rule --add app="^Finder$" sticky=on layer=normal manage=off

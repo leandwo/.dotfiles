@@ -93,10 +93,10 @@ alias restart_spacebar="brew services restart spacebar"
 alias rsp="restart_spacebar"
 
 # keyboards keyboards
-alias kb_flash_zygote="qmk flash -kb zygote -km leosolid"
-alias kb_edit_zygote="nvim ~/m/dev/qmk_firmware/keyboards/zygote/keymaps/leosolid/keymap.c"
-alias kb_flash_technik="qmk flash -kb boardsource/technik_o -km leosolid"
-alias kb_edit_technik="dev && cd qmk_firmware && nvim ~/m/dev/qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/keymap.c"
+alias flash-zygote="qmk flash -kb zygote -km leosolid"
+alias zygote="nvim ~/m/dev/qmk_firmware/keyboards/zygote/keymaps/leosolid/keymap.c"
+alias flash-technik="qmk flash -kb boardsource/technik_o -km leosolid"
+alias technik="dev && cd qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/ && nvim ~/m/dev/qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/keymap.c"
 
 # github
 alias gh_web="gh repo view --web"
@@ -149,6 +149,7 @@ if [ -f '/Users/leosol/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/leosol/g
 if [ -f '/Users/leosol/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/leosol/google-cloud-sdk/completion.zsh.inc'; fi
 
 export EDITOR=/usr/local/bin/nvim
+export GIT_EDITOR=/usr/local/bin/nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

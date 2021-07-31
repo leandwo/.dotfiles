@@ -73,8 +73,8 @@ set shell=zsh
 " Some useful settings
 set smartindent
 set expandtab         "tab to spaces
-set tabstop=4         "the width of a tab
-set shiftwidth=4      "the width for indent
+set tabstop=2         "the width of a tab
+set shiftwidth=2      "the width for indent
 set foldenable
 set foldmethod=indent
 set foldlevel=99
@@ -204,11 +204,6 @@ nnoremap <leader>gb       :Git blame<CR>
 xmap     ga               <Plug>(EasyAlign)
 nmap     ga               <Plug>(EasyAlign)
 
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-l> <plug>(fzf-complete-line)
-
-
 " >> Telescope bindings
 nnoremap <Leader>pp :lua require'telescope.builtin'.builtin{}<CR>
 " most recentuly used files
@@ -237,7 +232,7 @@ nnoremap <silent> gD       <Cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gd       <Cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> ge       <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <silent> gf       <cmd>lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent> gg       <cmd>lua vim.lsp.buf.code_action()<CR>
+"nnoremap <silent> gc       <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gi       <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> gn       <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> gr       <cmd>lua vim.lsp.buf.references()<CR>
