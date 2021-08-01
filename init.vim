@@ -95,7 +95,11 @@ set cursorline       "hilight the line of the cursor
 set nocursorcolumn     "hilight the column of the cursor
 " set nowrap           "no line wrapping
 colorscheme onedark  
-set background=dark "use the light version of gruvbox
+
+highlight Normal guibg=black guifg=white
+hi Normal ctermbg=16 guibg=#000000
+hi LineNr ctermbg=16 guibg=#000000
+set background=dark 
 
 " Other Settings
 set termguicolors
@@ -265,3 +269,5 @@ require("completion")
 require("statusbar")
 require'lspsaga'.init_lsp_saga()
 EOF
+
+
