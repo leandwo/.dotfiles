@@ -11,7 +11,7 @@ os.environ['PATH']                      += os.pathsep + '/usr/local/bin'
 os.environ['PATH']                      += os.pathsep + '/usr/bin'
 
 # TODO create toggle for diagnostics
-c.colors.webpage.darkmode.enabled        = False
+c.colors.webpage.darkmode.enabled        = True
 c.colors.webpage.darkmode.grayscale.all  = False
 c.colors.webpage.preferred_color_scheme  = 'dark'
 
@@ -47,6 +47,9 @@ c.url.searchengines                      = {'DEFAULT': 'https://www.google.com/s
 
 c.window.hide_decoration                 = False
 
+c.url.default_page = 'about:blank'
+c.url.start_pages = ['github.com']
+
 
 #########
 # Binds #
@@ -65,12 +68,16 @@ config.bind('k', 'tab-prev')
 config.bind('J', 'tab-move +')
 config.bind('K', 'tab-move -')
 config.bind('cn', 'tab-only -p -P keep')
+config.bind('cp', 'tab-only -n -P keep')
+config.bind('ce', 'config-edit')
 config.bind('p', 'tab-pin')
 config.bind('t', 'set-cmd-text -s :tab-select')
+config.bind('ss', 'set-cmd-text -s :session-save')
+config.bind('sl', 'set-cmd-text -s :session-load --clear')
 
 config.bind('m', 'bookmark-add')
 config.bind('M', 'quickmark-save')
-config.bind('st', 'config-source')
+config.bind('sc', 'config-source')
 
 # toggle configs
 config.bind('xx', 'config-cycle window.hide_decoration true false')

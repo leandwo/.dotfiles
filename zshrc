@@ -104,7 +104,7 @@ alias ghw="gh_web"
 
 # vim 
 alias v="nvim"
-alias vi="nvim"
+# alias vi="nvim"
 alias vim="nvim"
 
 # vimwiki
