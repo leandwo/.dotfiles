@@ -95,11 +95,8 @@ set cursorline       "hilight the line of the cursor
 set nocursorcolumn     "hilight the column of the cursor
 " set nowrap           "no line wrapping
 colorscheme onedark  
-
-highlight Normal guibg=black guifg=white
-hi Normal ctermbg=16 guibg=#000000
-hi LineNr ctermbg=16 guibg=#000000
 set background=dark 
+hi Normal guibg=NONE ctermbg=NONE
 
 " Other Settings
 set termguicolors
