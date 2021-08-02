@@ -194,12 +194,21 @@ nnoremap <leader>wc :close<CR>
 nnoremap <leader>wd :x<CR>
 nnoremap <leader>wq :q!<CR>
 
+" window only
+nnoremap <leader>wo <C-w>o
+
 " tabs
 " nnoremap <leader>tt :tabnew<CR>
 nnoremap tn  gT
 nnoremap ti gt
 nnoremap td :tabclose<CR>
 nnoremap tt :tab split<CR>
+
+" same as above but with leader
+nnoremap <leader>tn  gT
+nnoremap <leader>ti gt
+nnoremap <leader>td :tabclose<CR>
+nnoremap <leader>tt :tab split<CR>
 
 
 " buffer
@@ -225,22 +234,14 @@ xmap     ga               <Plug>(EasyAlign)
 nmap     ga               <Plug>(EasyAlign)
 
 " >> Telescope bindings
-nnoremap <Leader>pp :lua require'telescope.builtin'.builtin{}<CR>
-" most recentuly used files
-nnoremap <Leader>m :lua require'telescope.builtin'.oldfiles{}<CR>
-" find buffer
-nnoremap <leader>bb :lua require'telescope.builtin'.buffers{}<CR>
-nnoremap <leader><leader> :lua require'telescope.builtin'.buffers{}<CR>
-" find in current buffer
-nnoremap <Leader>/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
-" bookmarks
-nnoremap <Leader>' :lua require'telescope.builtin'.marks{}<CR>
-" git files
-nnoremap <Leader>. :lua require'telescope.builtin'.git_files{}<CR>
-" all files
-nnoremap <Leader>o :lua require'telescope.builtin'.find_files{}<CR>
-" ripgrep like grep through dir
-nnoremap <Leader>f :lua require'telescope.builtin'.live_grep{}<CR>
+nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>                   " find telescope
+nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>                  " find recent
+nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>                   " find buffer
+nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR> " find /
+nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>                     " find marks
+nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>                 " find git
+nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>                " find files in current directory
+nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>                 " find all
 
 " >> LSP Key Bindings
 nnoremap <silent> <C-k>    <cmd>lua vim.lsp.buf.signature_help()<CR>
