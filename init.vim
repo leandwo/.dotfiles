@@ -171,16 +171,35 @@ nnoremap <A-C-e> <C-w>j
 nnoremap <A-C-u> <C-w>k
 nnoremap <A-C-i> <C-w>l
 
-nnoremap <leader>vv :vsplit<CR>
-nnoremap <leader>vs :split<CR>
-" nnoremap <leader>d :close<CR>
+" windows
+nnoremap <leader>ww <C-w>w 
+nnoremap <leader>wn <C-w>h 
+nnoremap <leader>we <C-w>j 
+nnoremap <leader>wu <C-w>k 
+nnoremap <leader>wi <C-w>l 
+
+" window move
+nnoremap <leader>wmn <C-w>H 
+nnoremap <leader>wme <C-w>J 
+nnoremap <leader>wmu <C-w>K 
+nnoremap <leader>wmi <C-w>L 
+
+" window vertical, horizontal
+nnoremap <leader>wv :vsplit<CR>
+nnoremap <leader>wh :split<CR>
+
+" window save, close, delete, quit
+nnoremap <leader>ws :w<CR>
+nnoremap <leader>wc :close<CR>
+nnoremap <leader>wd :x<CR>
+nnoremap <leader>wq :q!<CR>
 
 " tabs
 " nnoremap <leader>tt :tabnew<CR>
 nnoremap tn  gT
 nnoremap ti gt
 nnoremap td :tabclose<CR>
-noremap tt :tab split<CR>
+nnoremap tt :tab split<CR>
 
 
 " buffer
