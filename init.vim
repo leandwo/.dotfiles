@@ -10,6 +10,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
@@ -296,6 +297,7 @@ require("treesitter")
 require("completion")
 require("statusbar")
 require'lspsaga'.init_lsp_saga()
+require('gitsigns').setup()
 EOF
 
 
