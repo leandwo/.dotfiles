@@ -73,8 +73,8 @@ set shell=zsh
 " Some useful settings
 set smartindent
 set expandtab         "tab to spaces
-set tabstop=2         "the width of a tab
-set shiftwidth=2      "the width for indent
+set tabstop=4         "the width of a tab
+set shiftwidth=4      "the width for indent
 set foldenable
 set foldmethod=indent
 set foldlevel=99
@@ -154,6 +154,9 @@ source ~/.cache/calendar.vim/credentials.vim
 """""""""""""""""""""""""""""""""""
 " mapping, keybinds, binds, remap "
 """""""""""""""""""""""""""""""""""
+
+" insert date
+nnoremap <leader>D :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
 
 " leader
 let mapleader = "\<Space>"
@@ -235,21 +238,21 @@ nmap     ga               <Plug>(EasyAlign)
 
 " >> Telescope bindings
 " find telescope
-nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>                   
+nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>
 " find recent
-nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>                  
+nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>
 " find buffer
-nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>                   
+nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>
 " find /
-nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR> 
+nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
 " find marks
-nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>                     
+nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>
 " find git
-nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>                 
+nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>
 " find files in current directory
-nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>                
+nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>
 " find all
-nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>                 
+nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>
 
 " >> LSP Key Bindings
 nnoremap <silent> <C-k>    <cmd>lua vim.lsp.buf.signature_help()<CR>
