@@ -234,14 +234,22 @@ xmap     ga               <Plug>(EasyAlign)
 nmap     ga               <Plug>(EasyAlign)
 
 " >> Telescope bindings
-nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>                   " find telescope
-nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>                  " find recent
-nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>                   " find buffer
-nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR> " find /
-nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>                     " find marks
-nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>                 " find git
-nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>                " find files in current directory
-nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>                 " find all
+" find telescope
+nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>                   
+" find recent
+nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>                  
+" find buffer
+nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>                   
+" find /
+nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR> 
+" find marks
+nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>                     
+" find git
+nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>                 
+" find files in current directory
+nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>                
+" find all
+nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>                 
 
 " >> LSP Key Bindings
 nnoremap <silent> <C-k>    <cmd>lua vim.lsp.buf.signature_help()<CR>
