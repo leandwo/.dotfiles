@@ -6,6 +6,7 @@ if 'NODE_PATH' in os.environ:
     os.environ['NODE_PATH'] += os.pathsep + '/usr/local/lib/node_modules'
 else:
     os.environ['NODE_PATH'] = os.pathsep + '/usr/local/lib/node_modules'
+os.environ['NODE_PATH'] += os.pathsep + '/Users/leosol/.nvm/versions/node/v16.4.2/lib/node_modules'
 
 os.environ['PATH']                      += os.pathsep + '/usr/local/bin'
 os.environ['PATH']                      += os.pathsep + '/usr/bin'
@@ -78,6 +79,7 @@ config.bind('sl', 'set-cmd-text -s :session-load --clear')
 config.bind('m', 'bookmark-add')
 config.bind('M', 'quickmark-save')
 config.bind('sc', 'config-source')
+config.bind('<Space>r', 'spawn --userscript readability-js')
 
 # toggle configs
 config.bind('xx', 'config-cycle window.hide_decoration true false')
