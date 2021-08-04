@@ -9,6 +9,7 @@
 """""""""""""""""""""
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'windwp/nvim-autopairs'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/popup.nvim'
@@ -26,9 +27,6 @@ Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'itchyny/calendar.vim'    
 Plug 'itchyny/vim-cursorword'
-" Plug 'itchyny/lightline.vim'
-
-" theme
 Plug 'joshdick/onedark.vim'
 
 Plug 'junegunn/vim-easy-align' 
@@ -43,6 +41,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-sleuth'
 
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
@@ -156,6 +155,11 @@ source ~/.cache/calendar.vim/credentials.vim
 " mapping, keybinds, binds, remap "
 """""""""""""""""""""""""""""""""""
 
+" mark alias 
+nnoremap M '
+nnoremap gm '
+nnoremap gM '
+
 " insert date
 nnoremap <leader>D :put =strftime('# %a %Y-%m-%d %H:%M:%S%z')<CR>
 
@@ -247,6 +251,7 @@ nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>
 " find /
 nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
 " find marks
+nnoremap <Leader>fm :lua require'telescope.builtin'.marks{}<CR>
 nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>
 " find git
 nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>
@@ -298,6 +303,5 @@ require("completion")
 require("statusbar")
 require'lspsaga'.init_lsp_saga()
 require('gitsigns').setup()
+require('nvim-autopairs').setup{}
 EOF
-
-
