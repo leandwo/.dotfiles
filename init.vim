@@ -9,6 +9,7 @@
 """""""""""""""""""""
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'unblevable/quick-scope'
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
@@ -155,6 +156,8 @@ source ~/.cache/calendar.vim/credentials.vim
 " mapping, keybinds, binds, remap "
 """""""""""""""""""""""""""""""""""
 
+nnoremap <BS> ;
+
 " mark alias 
 nnoremap M '
 nnoremap gm '
@@ -173,11 +176,6 @@ nnoremap <C-L>            :nohlsearch<CR><C-L>
 " reload, vimrc, init.vim
 nnoremap <leader>sv       :source $MYVIMRC<CR>
 nnoremap <leader>ss       :source $MYVIMRC<CR>
-
-nnoremap <A-C-n> <C-w>h
-nnoremap <A-C-e> <C-w>j
-nnoremap <A-C-u> <C-w>k
-nnoremap <A-C-i> <C-w>l
 
 " windows
 nnoremap ,ww <C-w>w 
@@ -228,15 +226,19 @@ nmap     ga               <Plug>(EasyAlign)
 
 " >> Telescope bindings
 " find telescope
-nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>
-nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>
-nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>
-nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
-nnoremap <Leader>fm :lua require'telescope.builtin'.marks{}<CR>
 nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>
-nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>
-nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>
-nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>
+nnoremap <Leader>f. :lua require'telescope.builtin'.grep_string{}<CR>
+nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
+nnoremap <Leader>fB :lua require'telescope.builtin'.file_browser{}<CR>
+nnoremap <Leader>fT :lua require'telescope.builtin'.treesitter{}<CR>
+nnoremap <Leader>ff :lua require'telescope.builtin'.find_files{}<CR>
+nnoremap <Leader>fgf :lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>fgs :lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>fm :lua require'telescope.builtin'.marks{}<CR>
+nnoremap <Leader>fo :lua require'telescope.builtin'.oldfiles{}<CR>
+nnoremap <Leader>fr :lua require'telescope.builtin'.live_grep{}<CR>
+nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>
+nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>
 
 " >> LSP Key Bindings
 nnoremap <silent> <C-k>    <cmd>lua vim.lsp.buf.signature_help()<CR>
