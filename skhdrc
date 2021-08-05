@@ -129,8 +129,10 @@ meh - c:
   yabai -m space last --move "$((current_space + 1))"; \
   spacebar -m config spaces on
 meh - d : 
-  yabai -m display --focus next || yabai -m display --focus first
+  yabai -m window --toggle float;\
+  yabai -m window --grid 6:4:1:1:2:4
+  # yabai -m display --focus next || yabai -m display --focus first
   # yabai -m window --toggle zoom-fullscreen
   # yabai -m window --ratio abs:0.325 # intuous tablet
 meh - v : 
-    yabai -m window --toggle split
+    # yabai -m window --toggle split
