@@ -9,40 +9,35 @@
 """""""""""""""""""""
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'unblevable/quick-scope'
-Plug 'windwp/nvim-autopairs'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
 Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-compe'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
-Plug 'kyazdani42/nvim-web-devicons'  " needed for galaxyline icons
-
-Plug 'ThePrimeagen/vim-be-good'
-
 Plug 'itchyny/calendar.vim'    
 Plug 'itchyny/vim-cursorword'
 Plug 'joshdick/onedark.vim'
-
 Plug 'junegunn/vim-easy-align' 
-
 Plug 'justinmk/vim-dirvish'
-
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'kyazdani42/nvim-web-devicons'  " needed for galaxyline icons
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'tools-life/taskwiki'
-Plug 'vimwiki/vimwiki',        { 'branch': 'dev'}
-
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'unblevable/quick-scope'
+Plug 'vimwiki/vimwiki',        { 'branch': 'dev'}
+Plug 'voldikss/vim-floaterm'
+Plug 'windwp/nvim-autopairs'
 
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/nvim-compe'
@@ -151,6 +146,11 @@ source ~/.cache/calendar.vim/credentials.vim
 "       \   'gitbranch': 'FugitiveHead'
 "       \ },
 "       \ }
+
+" floaterm "
+let g:floaterm_keymap_toggle = '<Leader><Leader>'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 
 """""""""""""""""""""""""""""""""""
 " mapping, keybinds, binds, remap "
