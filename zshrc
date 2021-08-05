@@ -117,8 +117,9 @@ alias vim="nvim"
 alias ww="nvim -c ':VimwikiIndex'"
 alias w="nvim -c ':VimwikiIndex'"
 alias wi="nvim -c ':VimwikiDiaryIndex'"
-alias i="nvim -c ':VimwikiDiaryIndex'"
-alias n="nvim -c ':VimwikiMakeDiaryNote'"
+alias wt="nvim -c ':VimwikiMakeDiaryNote'"
+alias wy="nvim -c ':VimwikiMakeYesterdayDiaryNote'"
+alias wm="nvim -c ':VimwikiMakeTomorrowDiaryNote'"
 
 # man
 export MANPAGER='nvim +Man!'
@@ -134,6 +135,8 @@ alias t="task"
 alias ta="task add"
 alias tn="task next"
 alias tw="task next pro:work"
+alias i="task add +in"
+
 
 # yadm
 alias y='yadm'
