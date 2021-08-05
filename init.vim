@@ -180,52 +180,37 @@ nnoremap <A-C-u> <C-w>k
 nnoremap <A-C-i> <C-w>l
 
 " windows
-nnoremap <leader>ww <C-w>w 
-nnoremap <leader>wn <C-w>h 
-nnoremap <leader>we <C-w>j 
-nnoremap <leader>wu <C-w>k 
-nnoremap <leader>wi <C-w>l 
-
-" window move
-nnoremap <leader>wmn <C-w>H 
-nnoremap <leader>wme <C-w>J 
-nnoremap <leader>wmu <C-w>K 
-nnoremap <leader>wmi <C-w>L 
-
-" window vertical, horizontal
-nnoremap <leader>wv :vsplit<CR>
-nnoremap <leader>wh :split<CR>
-
-" window save, close, delete, quit
-nnoremap <leader>ws :w<CR>
-nnoremap <leader>wc :close<CR>
-nnoremap <leader>wd :x<CR>
-nnoremap <leader>wq :q!<CR>
-
-" window only
-nnoremap <leader>wo <C-w>o
+nnoremap ,ww <C-w>w 
+nnoremap ,wn <C-w>h 
+nnoremap ,we <C-w>j 
+nnoremap ,wu <C-w>k 
+nnoremap ,wi <C-w>l 
+nnoremap ,wmn <C-w>H 
+nnoremap ,wme <C-w>J 
+nnoremap ,wmu <C-w>K 
+nnoremap ,wmi <C-w>L 
+nnoremap ,wv :vsplit<CR>
+nnoremap ,wh :split<CR>
+nnoremap ,ws :w<CR>
+nnoremap ,wc :close<CR>
+nnoremap ,wd :x<CR>
+nnoremap ,wq :q!<CR>
+nnoremap ,wo <C-w>o
 
 " tabs
 " nnoremap <leader>tt :tabnew<CR>
-nnoremap tn  gT
-nnoremap ti gt
-nnoremap td :tabclose<CR>
-nnoremap tt :tab split<CR>
-
-" same as above but with leader
-nnoremap <leader>tn  gT
-nnoremap <leader>ti gt
-nnoremap <leader>td :tabclose<CR>
-nnoremap <leader>tt :tab split<CR>
-
+nnoremap ,tn  gT
+nnoremap ,ti gt
+nnoremap ,td :tabclose<CR>
+nnoremap ,tt :tab split<CR>
 
 " buffer
-nnoremap <leader>bi :bnext<CR>
-nnoremap <leader>bn :brev<CR>
-nnoremap <leader>bs :wq<CR>
-nnoremap <leader>bS :wq!<CR>
-nnoremap <leader>bd :bd<CR>
-nnoremap <leader>bD :q!<CR>
+nnoremap ,bi :bnext<CR>
+nnoremap ,bn :brev<CR>
+nnoremap ,bs :wq<CR>
+nnoremap ,bS :wq!<CR>
+nnoremap ,bd :bd<CR>
+nnoremap ,bD :q!<CR>
 
 
 "" plugins
@@ -244,20 +229,13 @@ nmap     ga               <Plug>(EasyAlign)
 " >> Telescope bindings
 " find telescope
 nnoremap <Leader>ft :lua require'telescope.builtin'.builtin{}<CR>
-" find recent
 nnoremap <Leader>fr :lua require'telescope.builtin'.oldfiles{}<CR>
-" find buffer
 nnoremap <leader>fb :lua require'telescope.builtin'.buffers{}<CR>
-" find /
 nnoremap <Leader>f/ :lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>
-" find marks
 nnoremap <Leader>fm :lua require'telescope.builtin'.marks{}<CR>
 nnoremap <Leader>f' :lua require'telescope.builtin'.marks{}<CR>
-" find git
 nnoremap <Leader>fg :lua require'telescope.builtin'.git_files{}<CR>
-" find files in current directory
 nnoremap <Leader>f. :lua require'telescope.builtin'.find_files{}<CR>
-" find all
 nnoremap <Leader>fa :lua require'telescope.builtin'.live_grep{}<CR>
 
 " >> LSP Key Bindings
@@ -305,3 +283,7 @@ require'lspsaga'.init_lsp_saga()
 require('gitsigns').setup()
 require('nvim-autopairs').setup{}
 EOF
+
+" autocmd "
+autocmd FileType help  setlocal number
+autocmd FileType help  setlocal relativenumber
