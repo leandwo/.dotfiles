@@ -1,21 +1,17 @@
 - clean: ['~']
 
+- defaults:
+    link:
+        create: true
+        force: true
+
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
-    ~/.config/yabai/yabairc: yabairc
-    ~/.config/spacebar/spacebarrc:
-      path: spacebarrc
-      force: true
-    ~/.config/kitty/kitty.conf:
-      path: kitty/kitty.conf
-      force: true
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/nvim/init.vim: init.vim
     ~/.config/skhd/skhdrc: skhdrc
-    ~/.config/nvim/init.vim:
-      path: init.vim
-      force: true
-    ~/.qutebrowser/config.py:
-      path: qutebrowser/config.py
-      force: true
-
-
+    ~/.config/spacebar/spacebarrc: spacebarrc
+    ~/.config/yabai/yabairc: yabairc
+    ~/.gitconfig: gitconfig
+    ~/.p10k.zsh: p10k.zsh
+    ~/.qutebrowser/config.py: qutebrowser/config.py
+    ~/.zshrc: zshrc
