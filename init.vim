@@ -156,8 +156,6 @@ let g:floaterm_height = 0.9
 " mapping, keybinds, binds, remap "
 """""""""""""""""""""""""""""""""""
 
-nnoremap <BS> ;
-
 " mark alias 
 nnoremap M '
 nnoremap gm '
@@ -257,6 +255,11 @@ nnoremap <silent> gr       <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gwa      <cmd>lua vim.lsp.buf.add_workspace_folder()<CR>
 nnoremap <silent> gwl      <cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
 nnoremap <silent> gwr      <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
+
+
+" nnoremap <leader>; :x<CR>
+nnoremap <leader><BS> :x<CR>
+nnoremap <BS> ;
 
 """""""""""""""""""""
 " aliases, commands "
