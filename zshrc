@@ -110,10 +110,7 @@ alias ghw="gh_web"
 
 # vim 
 alias v="nvim"
-# alias vi="nvim"
-alias vim="nvim"
-
-# vimwiki
+alias vg="nvim +:Git +:only"
 alias ww="nvim -c ':VimwikiIndex'"
 alias w="nvim -c ':VimwikiIndex'"
 alias wi="nvim -c ':VimwikiDiaryIndex'"
@@ -136,6 +133,7 @@ alias ta="task add"
 alias tn="task next"
 alias tw="task next pro:work"
 alias i="task add +in"
+alias ti="task +in"
 
 
 # yadm
