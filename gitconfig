@@ -1,5 +1,14 @@
 [user]
-	name = Leo S.
+	name = Leo S
 	email = 13348080+leosolid@users.noreply.github.com
 [core]
 	autocrlf = input
+	excludesfile = /Users/leosol/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/leosol/.stCommitMsg
