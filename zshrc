@@ -133,11 +133,26 @@ alias ta="task add"
 alias tn="task next"
 alias tw="task next pro:work"
 alias i="task add +in"
-alias ti="task +in"
-
-
-# yadm
-alias y='yadm'
+alias ti="task in"
+tickle () {
+  deadline=$1
+  shift
+  i +tickle wait:$deadline $@
+}
+alias tick=tickle
+alias think='tickle +1d'
+webpage_title (){
+  wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
+read_and_review (){
+  link="$1"
+  title=$(wget -qO- $link | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
+  echo $title
+  descr="\"Read and review: $title\""
+  id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+  task "$id" annotate "$link"
+}
+alias rnr=read_and_review
 
 # python
 alias py='python3'
