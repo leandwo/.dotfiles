@@ -157,7 +157,7 @@ let g:floaterm_height = 0.9
 """""""""""""""""""""""""""""""""""
 
 " mark alias 
-nnoremap M '
+nnoremap M m
 nnoremap gm '
 nnoremap gM '
 
