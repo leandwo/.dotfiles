@@ -148,7 +148,7 @@ source ~/.cache/calendar.vim/credentials.vim
 "       \ }
 
 " floaterm "
-let g:floaterm_keymap_toggle = '<Leader><Leader>'
+let g:floaterm_keymap_toggle = ',,'
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 
