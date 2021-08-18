@@ -90,7 +90,7 @@ meh - f :
 meh - p : 
   yabai -m window --warp east
 meh - b : 
-  yabai -m window --space next; yabai -m space --focus next # send window to next
+  yabai -m window --space prev; yabai -m space --focus prev # send window to prev
 
 # LEFT HAND : ROW 2
 # meh - 0x33 :
@@ -109,13 +109,13 @@ meh - t:
   yabai -m space --move next; \
   spacebar -m config spaces on
 meh - g : 
-  yabai -m display --focus next || yabai -m display --focus first
+  yabai -m window --toggle float;\
+  yabai -m window --grid 6:4:1:1:2:4
 
 # LEFT HAND : ROW 3
-# meh - 0x1B :
-#   yabai -m space --balance
 meh - z : 
-  yabai -m window --grid 1:1:0:0:1:1 
+  yabai -m window --toggle zoom-fullscreen
+#   yabai -m window --grid 1:1:0:0:1:1 
 meh - x: 
   (yabai -m space --focus prev && yabai -m space recent --destroy) || yabai -m space --destroy; \
   spacebar -m config spaces on
@@ -129,10 +129,10 @@ meh - c:
   yabai -m space last --move "$((current_space + 1))"; \
   spacebar -m config spaces on
 meh - d : 
-  yabai -m window --toggle float;\
-  yabai -m window --grid 6:4:1:1:2:4
-  # yabai -m display --focus next || yabai -m display --focus first
-  # yabai -m window --toggle zoom-fullscreen
-  # yabai -m window --ratio abs:0.325 # intuous tablet
+  yabai -m display --focus next || yabai -m display --focus first
 meh - v : 
-    # yabai -m window --toggle split
+  yabai -m window --space next; yabai -m space --focus next # send window to next
+
+# other possibly useful commands
+# yabai -m window --toggle split
+# yabai -m window --ratio abs:0.325 # intuous tablet
