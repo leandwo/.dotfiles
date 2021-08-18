@@ -73,8 +73,6 @@
 ############
 
 # LEFT HAND : ROW 1
-# meh - 0x32 : 
-#   yabai -m window --space prev; yabai -m space --focus prev # send window to prev
 meh - q : 
   yabai -m window --warp west
 meh - w : 
