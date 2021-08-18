@@ -78,15 +78,15 @@
 meh - q : 
   yabai -m window --warp west
 meh - w : 
-  yabai -m window --focus prev || yabai -m window --focus last
+  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")" \
+  || yabai -m window --focus last
+  # yabai -m window --focus prev || yabai -m window --focus last
   # yabai -m window --focus prev || (yabai -m space  --focus prev || yabai -m space --focus last; yabai -m window --focus last)
-#   # yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | nth(index(map(select(.focused == 1))) - 1).id")" \
-#   # || yabai -m window --focus last
 meh - f : 
-  yabai -m window --focus next || yabai -m window --focus first
+  yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
+  || yabai -m window --focus first
+  # yabai -m window --focus next || yabai -m window --focus first
   # yabai -m window --focus next || (yabai -m space  --focus next || yabai -m space --focus first; yabai -m window --focus first)
-#   # yabai -m window --focus "$(yabai -m query --windows | jq -re "sort_by(.display, .frame.x, .frame.y, .id) | map(select(.visible == 1 and .subrole != \"AXUnknown\")) | reverse | nth(index(map(select(.focused == 1))) - 1).id")" \
-#   # || yabai -m window --focus first
 meh - p : 
   yabai -m window --warp east
 meh - b : 
