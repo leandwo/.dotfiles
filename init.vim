@@ -231,7 +231,7 @@ nnoremap <Leader>fB :lua require'telescope.builtin'.file_browser{}<CR>
 nnoremap <Leader>fT :lua require'telescope.builtin'.treesitter{}<CR>
 nnoremap <Leader>ff :lua require'telescope.builtin'.find_files{}<CR>
 nnoremap <Leader>fgf :lua require'telescope.builtin'.git_files{}<CR>
-nnoremap <Leader>fgs :lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>fgs :lua require'telescope.builtin'.git_status{}<CR>
 nnoremap <Leader>fm :lua require'telescope.builtin'.marks{}<CR>
 nnoremap <Leader>fo :lua require'telescope.builtin'.oldfiles{}<CR>
 nnoremap <Leader>fr :lua require'telescope.builtin'.live_grep{}<CR>
@@ -260,6 +260,7 @@ nnoremap <silent> gwr      <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 " nnoremap <leader>; :x<CR>
 nnoremap <leader><BS> :x<CR>
 nnoremap <BS> ;
+vnoremap <BS> ;
 nnoremap <leader><CR> :w<CR>
 
 """""""""""""""""""""
