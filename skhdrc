@@ -115,9 +115,8 @@ meh - z :
   yabai -m window --toggle zoom-fullscreen
 #   yabai -m window --grid 1:1:0:0:1:1 
 meh - x: 
-  yabai -m space --destroy; \
+  (yabai -m space --focus prev && yabai -m space recent --destroy) || yabai -m space --destroy; \
   spacebar -m config spaces on
-  # (yabai -m space --focus prev && yabai -m space recent --destroy) || yabai -m space --destroy; \
   # current_space=$(yabai -m query --spaces --space | jq -r '.index'); \
   # yabai -m space --destroy; \
   # num_spaces=$(yabai -m query --spaces | jq length); \
