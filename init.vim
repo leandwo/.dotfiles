@@ -260,6 +260,7 @@ nnoremap <silent> gwr      <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 " nnoremap <leader>; :x<CR>
 nnoremap <leader><BS> :x<CR>
 nnoremap <BS> ;
+nnoremap <leader><CR> :w<CR>
 
 """""""""""""""""""""
 " aliases, commands "
