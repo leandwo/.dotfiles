@@ -98,10 +98,10 @@ meh - a:
   yabai -m space --move prev; \
   spacebar -m config spaces on
 meh - r : 
-  yabai -m space --focus prev || yabai -m space --focus last; yabai -m window --focus first
+  yabai -m space --focus prev; # || yabai -m space --focus last; # yabai -m window --focus first
   # yabai -m window --focus mouse || yabai -m window --focus last
 meh - s : 
-  yabai -m space --focus next || yabai -m space --focus first; yabai -m window --focus first 
+  yabai -m space --focus next; # || yabai -m space --focus first; # yabai -m window --focus first 
   # yabai -m window --focus mouse || yabai -m window --focus first
 meh - t: 
   yabai -m space --move next; \
