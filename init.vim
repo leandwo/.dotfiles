@@ -252,7 +252,7 @@ nnoremap <silent> gD       <Cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gd       <Cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> ge       <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <silent> gf       <cmd>lua vim.lsp.buf.formatting()<CR>
-"nnoremap <silent> gc       <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <space>c <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> gi       <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> gn       <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> gr       <cmd>lua vim.lsp.buf.references()<CR>
@@ -265,7 +265,7 @@ nnoremap <silent> gwr      <cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>
 nnoremap <leader><BS> :x<CR>
 nnoremap <BS> ;
 vnoremap <BS> ;
-nnoremap <leader><CR> :w<CR>
+nnoremap <space><space> :w<CR>
 
 """""""""""""""""""""
 " aliases, commands "
