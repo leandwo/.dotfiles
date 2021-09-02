@@ -156,6 +156,9 @@ let g:floaterm_height = 0.9
 """""""""""""""""""""""""""""""""""
 " mapping, keybinds, binds, remap "
 """""""""""""""""""""""""""""""""""
+" vimwiki diary"
+nmap <C-Left> <Plug>VimwikiDiaryPrevDay
+nmap <C-Right> <Plug>VimwikiDiaryNextDay
 
 " mark alias 
 nnoremap M m
