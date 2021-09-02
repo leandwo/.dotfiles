@@ -9,6 +9,7 @@
 """""""""""""""""""""
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'glepnir/galaxyline.nvim', { 'branch': 'main' }
 Plug 'glepnir/lspsaga.nvim'
