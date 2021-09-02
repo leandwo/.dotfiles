@@ -103,10 +103,12 @@ alias flash-zygote="qmk flash -kb zygote -km leosolid"
 alias flash-technik="qmk flash -kb boardsource/technik_o -km leosolid"
 alias edit-zygote="nvim ~/m/dev/qmk_firmware/keyboards/zygote/keymaps/leosolid/keymap.c"
 alias edit-technik="cd ~/m/dev/qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/ && nvim ~/m/dev/qmk_firmware/keyboards/boardsource/technik_o/keymaps/leosolid/keymap.c"
+alias edit-microdox="cd /Users/leosol/m/dev/zmk/app/boards/shields/microdox && nvim microdox.keymap"
 alias zmk="cd ~/m/dev/zmk/app"
 
-alias build-microdox-left="west build -d build/left -p -b nice_nano -- -DSHIELD=microdox_left"
-alias build-microdox-right="west build -d build/right -p -b nice_nano -- -DSHIELD=microdox_right"
+alias build-microdox-left="zmk && west build -d build/left -p -b nice_nano -- -DSHIELD=microdox_left"
+alias build-microdox-right="zmk && west build -d build/right -p -b nice_nano -- -DSHIELD=microdox_right"
+alias build-microdox-both="build-microdox-left && build-microdox-right"
 alias flash-microdox="echo move zmk.uf2 into nice nano drive"
 
 # github
