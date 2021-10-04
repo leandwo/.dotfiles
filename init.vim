@@ -121,11 +121,20 @@ endif
 """""""""""""""""""
 
 " Vimwiki
+let g:vimwiki_use_calendar = 1
 let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_global_ext = 0
 let g:vimwiki_folding = 'syntax'
 let g:vimwiki_list = [{'path': '~/vimwiki/',
             \ 'syntax': 'markdown', 'ext': '.md'}]
+
+au BufNewFile ~/vimwiki/diary/*.md
+  \ call append(0,[
+  \ "# " . split(expand('%:r'),'/')[-1], "",
+  \ "## Summary",  "",
+  \ "## Todo",  "",
+  \ "## Standup",  "",
+  \ "## Notes", "" ])
 
 " Taskwiki
 let g:taskwiki_markup_syntax = 'markdown'
