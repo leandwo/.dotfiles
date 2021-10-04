@@ -201,3 +201,11 @@ unset __conda_setup
 export PATH=~/.local/bin:"$PATH"
 export GNUARMEMB_TOOLCHAIN_PATH=/usr/local/
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+
+
+# nativescript stuff
+## ios
+export PATH=/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH
+## android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
